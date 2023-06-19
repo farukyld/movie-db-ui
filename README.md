@@ -26,7 +26,7 @@ python manage.py runserver
 # you should run this script:
 python initiateServer.py
 ```
-for windows execute
+for windows execute this in powershell
 ```powershell
 # install the required python packages
 python -m pip install -r requirements.txt
