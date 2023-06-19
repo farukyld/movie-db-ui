@@ -51,4 +51,4 @@ python initiateServer.py
 
 then connect the UI via your browser by [http://127.0.0.1:8000](http://127.0.0.1:8000)
 you can check out the initial records inside [insertInitials.sql](code\movie_db_ui\movieDB\databaseManagement\sqlFiles\insertQueries\insertInitials.sql)
-you can log in as a database manager and create directors, audience etc. detailed information is in the [project description]()
+you can log in as a database manager and create directors, audience etc. detailed information is in the [project description](https://github.com/farukyld/movie-db-ui/wiki/Project-Description)
