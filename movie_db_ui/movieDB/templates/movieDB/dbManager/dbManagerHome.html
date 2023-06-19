@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome, Database Manager!</h1>
+  <a href="{% url 'dbManagerAddAudience' %}">Add Audience</a>
+  <p></p>
+  <a href="{% url 'dbManagerAddDirector' %}">Add Director</a>
+  <p></p>
+  <a href="{% url 'dbManagerDeleteAudience' %}">Delete Audience</a>
+  <p></p>
+  <a href="{% url 'dbManagerAddPlatform' %}">Add Platform</a>
+  <p></p>
+  <a href="{% url 'dbManagerUpdateDirectorPlatform' %}">Update Director's Platform</a>
+  <p></p>
+  {% for listingOperation, displayName in listingOperations %}
+    <a href="{% url 'dbManagerList' listingOperation %}">{{ displayName }}</a><br>
+  {% endfor %}
+
+{% endblock %}

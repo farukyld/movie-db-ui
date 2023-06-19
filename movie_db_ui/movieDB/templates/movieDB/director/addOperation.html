@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ formHeader }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+    {% if message %}
+    <p>{{ message }}</p>
+    {% endif %}
+</form>
+
+<p><a href="{% url 'drtHome' %}">Back to Home</a></p>
+{% endblock %}

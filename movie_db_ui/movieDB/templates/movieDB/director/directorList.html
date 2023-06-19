@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if data %}
+    <h1>{{ tableName }}</h1>
+    <table>
+        <thead>
+            <tr>
+                {% for header in headers %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% elif form %}
+    <h1>{{ formHeader }}</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% else %}
+<h1>Nothing Found</h1>
+{% endif %}
+<p><a href="{% url 'drtHome' %}">Back to Home</a></p>
+{% endblock %}

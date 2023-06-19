@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if data %}
+    <h1>{{ tableName }}</h1>
+    <table>
+        <thead>
+            <tr>
+                {% for header in headers %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <h1>Nothing Found</h1>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endif %}
+<p><a href="{% url 'audHome' %}">Back to Home</a></p>
+{% endblock %}

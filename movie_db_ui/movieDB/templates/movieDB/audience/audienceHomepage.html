@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Welcome, Audience!</h1>
+    <div>
+        <a href="{% url 'audBuyTicket' %}">Buy Ticket</a>
+        <p></p>
+        <a href="{% url 'audRate' %}">Rate Movie</a>
+        <p></p>
+        {% for operation, displayName in listingOperations %}
+            <a href="{% url 'audList' operation %}">{{ displayName }}</a><br>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Add Platform</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Platform</button>
+  </form>
+  {% if message %}
+    <p>{{ message }}</p>
+  {% endif %}
+<a href="{% url 'dbManagerHome' %}">Back to Home</a>
+{% endblock %}
