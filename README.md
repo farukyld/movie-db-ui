@@ -24,7 +24,7 @@ export $p3_Port=""
 python manage.py runserver
 # in order to create the database tables and insert some initial records,
 # you should run this script:
-python initiateServer.py
+python initiate_databse.py
 ```
 for windows execute this in powershell
 ```powershell
@@ -45,7 +45,7 @@ python manage.py runserver
 
 # in order to create the database tables and insert some initial records,
 # you should run this script:
-python initiateServer.py
+python initiate_databse.py
 
 ```
 
