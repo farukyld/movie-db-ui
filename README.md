@@ -1,4 +1,9 @@
 # movie-db-ui
+
+## purpose
+this project aims to practice front-end, back-end, database communication using python-django and mysql. We didn't use django's orm in this project in order to have a deeper understanding of how back-ends interact with databases. 
+
+## what it does 
 this is an application that enables different user types (database managers, directors, audience) to interact with a database called movie database via a UI. 
 
 ## how to run
@@ -21,6 +26,8 @@ python manage.py runserver
 # you should run this script:
 python initiateServer.py
 ```
-then connect the UI via your browser by 127.0.0.1
-you can check out the initial records inside this [file](code\movie_db_ui\movieDB\databaseManagement\sqlFiles\insertQueries\insertInitials.sql)
+(or for windows execute [this]())
+
+then connect the UI via your browser by [127.0.0.1](127.0.0.1)
+you can check out the initial records inside [insertInitials.sql](code\movie_db_ui\movieDB\databaseManagement\sqlFiles\insertQueries\insertInitials.sql)
 you can log in as a database manager and create directors, audience etc. detailed information is in the [project description]()
